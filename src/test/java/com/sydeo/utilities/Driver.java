@@ -1,4 +1,4 @@
-package com.sydeo.utiilities;
+package com.sydeo.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

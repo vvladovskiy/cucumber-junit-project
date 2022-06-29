@@ -1,4 +1,4 @@
-package com.sydeo.utiilities;
+package com.sydeo.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
