@@ -9,53 +9,43 @@ import io.cucumber.java.en.When;
 
 public class FleetModule {
 
-    //FleetModulePage fleetModulePage = new FleetModulePage();
+    FleetModule fleetModule = new FleetModule();
+
     @Given("user is on the Vytrack login page")
-    public void userIsOnTheVytrackLoginPage() {
-        System.out.println("Login page appear");
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-    }
+    public void user_is_on_the_vytrack_login_page() {
 
+    }
     @When("user enters track driver un {string}")
-    public void userEntersTrackDriverUn(String string) {
-        System.out.println("Enter username");
-        Driver.getDriver().get(ConfigurationReader.getProperty("username"));
-    }
+    public void user_enters_track_driver_un(String string) {
 
-    @And("user enters track driver pwd {string}")
-    public void userEntersTrackDriverPwd(String string) {
-        System.out.println("Enter password");
-        Driver.getDriver().get(ConfigurationReader.getProperty("password"));
     }
+    @When("user enters track driver pwd {string}")
+    public void user_enters_track_driver_pwd(String string) {
 
+    }
     @Then("user should see Fleet module")
-    public void userShouldSeeFleetModule() {
-        System.out.println("Click SignIn Button");
+    public void user_should_see_fleet_module() {
+
     }
+
 
 
 
     @Given("user is on the Fleet Management page")
-    public void userIsOnTheFleetManagementPage() {
-        System.out.println("Fleet Management page appear");
-    }
+    public void user_is_on_the_fleet_management_page() {
 
+    }
     @When("navigate to the Fleet option on top menu")
-    public void navigateToTheFleetOptionOnTopMenu() {
-        System.out.println("Navigate Fleet option menu");
-    }
+    public void navigate_to_the_fleet_option_on_top_menu() {
 
-    @And("navigate to the Vehicle dropdown option")
-    public void navigateToTheVehicleDropdownOption() {
-        System.out.println("Navigate Vehicle dropdown menu");
+    }
+    @When("navigate to the Vehicle dropdown option")
+    public void navigate_to_the_vehicle_dropdown_option() {
+
     }
     @Then("get all Vehicle information grid")
-    public void getAllVehicleInformationGrid() {
-        System.out.println("Click any car to get info");
+    public void get_all_vehicle_information_grid() {
+
     }
-
-
-
-
 
 }

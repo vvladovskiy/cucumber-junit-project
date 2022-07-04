@@ -24,7 +24,7 @@ public class VytrackLoginPage {
     WebElement signInBtn;
 
     @FindBy(xpath = "//*[@id='login-form']/fieldset/div[1]/div")
-    WebElement checkerrormsg;
+    WebElement checkErrorMsg;
 
 
 // Actions
@@ -33,7 +33,7 @@ public String validateLoginPageTitle(){
 }
 
 public boolean validateErrorMessage(){
-    return checkerrormsg.isDisplayed();
+    return checkErrorMsg.isDisplayed();
 }
 
 public VytrackLoginPage login(String un, String pwd){
