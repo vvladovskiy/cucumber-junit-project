@@ -15,16 +15,16 @@ public class VytrackLoginPage {
 
 // Page Factory
     @FindBy(xpath = "//*[@id='prependedInput']")
-    WebElement username;
+    public WebElement username;
 
     @FindBy(xpath = "//*[@id='prependedInput2']")
-    WebElement password;
+    public WebElement password;
 
     @FindBy(xpath = "//*[@id='_submit']")
-    WebElement signInBtn;
+    public WebElement signInBtn;
 
     @FindBy(xpath = "//*[@id='login-form']/fieldset/div[1]/div")
-    WebElement checkErrorMsg;
+    public WebElement checkErrorMsg;
 
 
 // Actions

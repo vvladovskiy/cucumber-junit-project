@@ -2,16 +2,17 @@ Feature: As a track driver navigation on the Vytrack Fleet Module.
   User Story: As a truck driver, user should be able to access all vehicle information
   grid under the Fleet module.
 
-  @driven
+  @driven1
   Scenario: Login as track driver
-    Given user is on the Vytrack login page
+    Given user is on the vytrack login page
     When user enters track driver un "user4"
     And user enters track driver pwd "UserUser123"
-    Then user should see Fleet module
+    And user click SignIn button
+    #Then user should see fleet module
 
-  @driven
+  @driven2
   Scenario: Access to all Vehicle information grid
-    Given user is on the Fleet Management page
-    When navigate to the Fleet option on top menu
-    And navigate to the Vehicle dropdown option
-    Then get all Vehicle information grid
+    Given user is on the fleet management page
+    When navigate to the fleet option on top menu
+    And navigate to the vehicle dropdown option
+    Then get all vehicle information grid
