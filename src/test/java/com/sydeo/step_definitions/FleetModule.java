@@ -18,13 +18,13 @@ public class FleetModule {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
 
-    @When("user enters track driver un {string}")
-    public void user_enters_track_driver_un(String string) {
+    @When("user enters track driver username {string}")
+    public void user_enters_track_driver_username(String string) {
         vytrackLoginPage.username.sendKeys(string);
     }
 
-    @When("user enters track driver pwd {string}")
-    public void user_enters_track_driver_pwd(String string) {
+    @When("user enters track driver password {string}")
+    public void user_enters_track_driver_password(String string) {
         vytrackLoginPage.password.sendKeys(string);
     }
 

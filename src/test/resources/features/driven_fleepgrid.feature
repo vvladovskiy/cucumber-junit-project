@@ -5,8 +5,8 @@ Feature: As a track driver navigation on the Vytrack Fleet Module.
   @driven1
   Scenario: Login as track driver
     Given user is on the vytrack login page
-    When user enters track driver un "user4"
-    And user enters track driver pwd "UserUser123"
+    When user enters track driver username "user4"
+    And user enters track driver password "UserUser123"
     And user click SignIn button
     #Then user should see fleet module
 
