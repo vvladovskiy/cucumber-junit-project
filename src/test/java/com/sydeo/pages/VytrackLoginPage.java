@@ -8,43 +8,49 @@ import org.openqa.selenium.support.PageFactory;
 
 public class VytrackLoginPage {
 
-// Initializing the Page Objects:
+    // Initializing the Page Objects:
     public VytrackLoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-// Page Factory
+
+    // Page Factory
     @FindBy(xpath = "//*[@id='prependedInput']")
     public WebElement username;
 
     @FindBy(xpath = "//*[@id='prependedInput2']")
     public WebElement password;
 
+    @FindBy(xpath = "//*[@id='login-form']/fieldset/div[2]/label/span[1]")
+    public WebElement remember_me;
+
     @FindBy(xpath = "//*[@id='_submit']")
     public WebElement signInBtn;
 
-    @FindBy(xpath = "//*[@id='login-form']/fieldset/div[1]/div")
-    public WebElement checkErrorMsg;
+
+    //@FindBy(xpath = "//*[@id='login-form']/fieldset/div[1]/div")
+    //public WebElement checkErrorMsg;
 
 
 // Actions
-public String validateLoginPageTitle(){
-    return Driver.getDriver().getTitle();
-}
+    public String validateLoginPageTitle(String str) {
+        return Driver.getDriver().getTitle();
+    }
 
-public boolean validateErrorMessage(){
-    return checkErrorMsg.isDisplayed();
-}
+//public boolean validateErrorMessage(){
+    //return checkErrorMsg.isDisplayed();
+//}
 
-public VytrackLoginPage login(String un, String pwd){
+    public VytrackLoginPage login(String un, String pwd) {
 
-    username.sendKeys(un);
-    password.sendKeys(pwd);
-    // signInBtn.click();
-    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
-js.executeScript("argument[0].click();",signInBtn);
-return new VytrackLoginPage();
-}
+        username.sendKeys(un);
+        password.sendKeys(pwd);
+        signInBtn.click();
+
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("argument[0].click();", signInBtn);
+        return new VytrackLoginPage();
+    }
 
     //Driver.closeDriver();
 }

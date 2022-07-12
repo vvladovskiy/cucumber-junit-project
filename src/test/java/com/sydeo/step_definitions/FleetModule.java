@@ -9,6 +9,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import static com.sydeo.utilities.BrowserUtils.verifyTitle;
+import static org.junit.Assert.assertEquals;
+
 public class FleetModule {
 
     VytrackLoginPage vytrackLoginPage = new VytrackLoginPage();
@@ -32,6 +35,18 @@ public class FleetModule {
     public void userClickSignInButton() {
         vytrackLoginPage.signInBtn.click();
     }
+
+    @And("user check mark field Remember me on this computer")
+    public void userCheckMarkFieldRememberMeOnThisComputer() {
+        vytrackLoginPage.remember_me.click();
+    }
+    @Then("user should see fleet module page")
+    public void user_should_see_fleet_module_page() {
+         verifyTitle("Dashboard");
+    }
+
+
+
 
 //    @Then("user should see fleet module")
 //    public void user_should_see_fleet_module() {
@@ -59,3 +74,4 @@ public class FleetModule {
 
     }
 }
+

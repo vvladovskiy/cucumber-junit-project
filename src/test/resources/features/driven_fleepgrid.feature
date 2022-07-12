@@ -3,12 +3,16 @@ Feature: As a track driver navigation on the Vytrack Fleet Module.
   grid under the Fleet module.
 
   @driven1
-  Scenario: Login as track driver
+  Scenario Outline: Login as track driver
     Given user is on the vytrack login page
-    When user enters track driver username "user4"
-    And user enters track driver password "UserUser123"
+    When user enters track driver username <string>
+    And user enters track driver password <string1>
+    And user check mark field Remember me on this computer
     And user click SignIn button
-    #Then user should see fleet module
+    Then user should see fleet module page
+    Examples:
+      | string  | string1       |
+      | "user4" | "UserUser123" |
 
   @driven2
   Scenario: Access to all Vehicle information grid
