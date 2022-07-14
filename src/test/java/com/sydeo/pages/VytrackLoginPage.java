@@ -1,6 +1,6 @@
 package com.sydeo.pages;
 
-import com.sydeo.utilities.Driver;
+import com.sydeo.utilities.DriverPT;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +10,7 @@ public class VytrackLoginPage {
 
     // Initializing the Page Objects:
     public VytrackLoginPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(DriverPT.getDriver(), this);
     }
 
 
@@ -34,7 +34,7 @@ public class VytrackLoginPage {
 
 // Actions
     public String validateLoginPageTitle(String str) {
-        return Driver.getDriver().getTitle();
+        return DriverPT.getDriver().getTitle();
     }
 
 //public boolean validateErrorMessage(){
@@ -47,7 +47,7 @@ public class VytrackLoginPage {
         password.sendKeys(pwd);
         signInBtn.click();
 
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) DriverPT.getDriver();
         js.executeScript("argument[0].click();", signInBtn);
         return new VytrackLoginPage();
     }

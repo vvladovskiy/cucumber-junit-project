@@ -1,46 +1,19 @@
 package com.sydeo.step_definitions;
 
-import com.sydeo.pages.VytrackLoginPage;
-import com.sydeo.utilities.ConfigurationReader;
-import com.sydeo.utilities.Driver;
-import io.cucumber.java.en.And;
+import com.sydeo.pages.FleetModulePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 
-import static com.sydeo.utilities.BrowserUtils.verifyTitle;
 import static com.sydeo.utilities.BrowserUtils.verifyTitle2;
 import static org.junit.Assert.assertEquals;
 
 public class FleetModule {
 
-    VytrackLoginPage vytrackLoginPage = new VytrackLoginPage();
+    FleetModulePage fleetModulePage = new FleetModulePage();
 
-    @Given("user is on the vytrack login page")
-    public void user_is_on_the_vytrack_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-    }
 
-    @When("user enters track driver username {string}")
-    public void user_enters_track_driver_username(String string) {
-        vytrackLoginPage.username.sendKeys(string);
-    }
 
-    @When("user enters track driver password {string}")
-    public void user_enters_track_driver_password(String string) {
-        vytrackLoginPage.password.sendKeys(string);
-    }
-
-    @And("user click SignIn button")
-    public void userClickSignInButton() {
-        vytrackLoginPage.signInBtn.click();
-    }
-
-    @And("user check mark field Remember me on this computer")
-    public void userCheckMarkFieldRememberMeOnThisComputer() {
-        vytrackLoginPage.remember_me.click();
-    }
     @Then("user should see fleet module page")
     public void user_should_see_fleet_module_page() {
          verifyTitle2("Dashboard");
