@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import static com.sydeo.utilities.BrowserUtils.verifyTitle;
+import static com.sydeo.utilities.BrowserUtils.verifyTitle2;
 import static org.junit.Assert.assertEquals;
 
 public class FleetModule {
@@ -42,7 +43,7 @@ public class FleetModule {
     }
     @Then("user should see fleet module page")
     public void user_should_see_fleet_module_page() {
-         verifyTitle("Dashboard");
+         verifyTitle2("Dashboard");
     }
 
 
